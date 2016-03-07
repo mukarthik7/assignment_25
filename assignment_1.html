@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Like</title>
+		<style>
+		.btn
+		{
+			background: #87CEEB;
+			border:1px solid #FFA500;
+			border-radius: 5px;
+			padding: 10px;
+			width: 100px;
+			color: #FFF;
+		}
+		.btn_liked
+		{
+			background: #FF6347;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<div id="page_container"> 
+			<button id="btn" class="btn">Like</button>
+		</div>
+			<script>
+				var btn_press = document.getElementById("btn")
+				btn_press.addEventListener("click", toggleClass);
+
+				function toggleClass()
+				{
+					this.classList.toggle('btn_liked');
+					if(this.innerHTML == "Like")
+					{
+						this.innerHTML = "Unlike";
+					}		
+					else{
+						this.innerHTML = "Like";
+					}			
+				}
+			</script>
+
+	
+	</body>
+</html>
